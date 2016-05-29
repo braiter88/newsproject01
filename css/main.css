@@ -1,0 +1,26 @@
+.searchImage {
+    height: 50px;
+    width: 50px;
+}
+.randomImage {
+    height: 50px;
+    width: 50px;
+}
+.catalogImage {
+    height: 100px;
+    width: 100px;
+}
+.jumbotron {
+    height: 200px;
+    width: 100%;
+}
+.col-xs-4 {
+    width: 200px;
+    text-align: justify;
+}
+.col-xs-8 {
+    width: calc(100% - 200px);
+}
+.justifyText {
+    text-align: justify;
+}

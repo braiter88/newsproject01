@@ -1,0 +1,21 @@
+<div class="panel panel-default row">
+
+    <div class="col-xs-4">
+        <a data-ui-sref="catalog({id: catalog.id})" data-ng-repeat="item in catalog"
+           data-ng-click="selectCategory(item); getArticlesForPage(item)" class="btn btn-block btn-default btn-lg"
+           data-ng-class="getCategoryClass(item)">[[item.title]]</a>
+    </div>
+
+    <div class="col-xs-8" data-ng-repeat="item in ArticlesForPage track by $index">
+        <h2>[[item.title]]</h2>
+        <p><img data-ng-src="[[item.image]]" class="catalogImage" /></p>
+        <p>[[item.text | limitTo: 300]] [[item.text.length > 300 ? '...' : '']]</p>
+        <p>
+            <a data-ui-sref="article({id: article.id})">
+                <h3>
+                    <span class="pull-right label label-primary">View details &raquo;</span>
+                </h3>
+            </a>
+        </p>
+    </div>
+</div>

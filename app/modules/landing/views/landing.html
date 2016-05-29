@@ -1,0 +1,30 @@
+<div class="panel panel-default row">
+
+    <div class="col-xs-4">
+        <a data-ui-sref="article({id: article.id})" data-ng-repeat="article in randomArticles track by $index">
+            <p><strong>[[article.title]]</strong></p>
+            <p><img data-ng-src="[[article.image]]" class="randomImage" /></p>
+            <p>[[article.text | limitTo: 100]] [[article.text.length > 100 ? '...' : '']]</p>
+        </a>
+    </div>
+
+    <div class="col-xs-8">
+        <!--<div class="container-fluid">-->
+            <!--<div class="row" ng-repeat-start="article in randomArticlesForCatalog track by $index">-->
+                <!--<div class="col-md-4">-->
+                    <!--<h2>[[article.title]]</h2>-->
+                    <!--<p><img data-ng-src="[[article.image]]" class="catalogImage" /></p>-->
+                    <!--<p>[[article.text | limitTo: 200]] [[article.text.length > 200 ? '...' : '']]</p>-->
+                    <!--<p ng-repeat-end>View details &raquo;</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <a data-ui-sref="catalog({id: catalog.id})" data-ng-repeat="article in randomArticlesForCatalog track by $index">
+            <h2>[[article.title]]</h2>
+            <p><img data-ng-src="[[article.image]]" class="catalogImage" /></p>
+            <p>[[article.text | limitTo: 200]] [[article.text.length > 200 ? '...' : '']]</p>
+            <p><h3><span class="pull-right label label-primary">View details &raquo;</span></h3></p>
+        </a>
+    </div>
+
+</div>
